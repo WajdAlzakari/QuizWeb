@@ -97,7 +97,7 @@ $quizzes_result = $conn->query($quizzes_sql);
   <div class="container">
     <div class="quiz-grid">
       <?php while ($row = $quizzes_result->fetch_assoc()): ?>
-        <div class="quiz-card" onclick="location.href='quiz_details.php?quiz_id=<?php echo $row['id']; ?>';">
+        <div class="quiz-card" onclick="location.href='take_quiz.php?quiz_id=<?php echo $row['id']; ?>';">
           <div class="quiz-title"><?php echo $row['title']; ?></div>
         </div>
       <?php endwhile; ?>
