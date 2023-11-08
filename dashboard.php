@@ -41,15 +41,20 @@ $quizzes_result = $conn->query($quizzes_sql);
 
         .container {
             max-width: 80%;
-            padding: 5%;
+            padding: 2% 5%;
             background-color: #f0f8ff;
             border-radius: 10px;
+            width: 30vw;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             text-align: center;
         }
 
         h2 {
-            color: #000080;
+            color: #085399;
+        }
+
+        h3{
+            color: #003884;
         }
 
         ul {
@@ -59,50 +64,57 @@ $quizzes_result = $conn->query($quizzes_sql);
 
         ul li {
             margin-bottom: 10px;
+            color: #085399;
         }
 
         a {
             text-decoration: none;
-            color: #000080;
+            color: #085399;
         }
 
         a:hover {
             color: #0000a0;
         }
         
-      #add  {background-color: #000080; /* Dark blue button */
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;}
+        #add  {
+            background-color: #085399; /* Dark blue button */
+            color: #ffffff;
+            width: 10vw;
+            padding: 8px 55px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
+
 </head>
 <body>
-<div class="container">
-          <h2>Admin Dashboard</h2><br>
+    <div class="container">
+        <h2>Admin Dashboard</h2><br>
+        <h3>Users</h3>
+    <ul>
+        <?php
+        $users_with_role_user_sql = "SELECT username FROM users WHERE role = 'user'";
+        $users_with_role_user_result = $conn->query($users_with_role_user_sql);
+        while ($user_row = $users_with_role_user_result->fetch_assoc()): ?>
+            <li><?php echo $user_row['username']; ?></li>
+        <?php endwhile; ?>
+    </ul>
+    <br>
+    <h3>Quizzes</h3>
+    <ul>
+        <?php while ($row = $quizzes_result->fetch_assoc()): ?>
+            <li>
+                <a href="quiz_details.php?quiz_id=<?php echo $row['id']; ?>">View - <?php echo $row['title']; ?></a>
+            </li>
+        <?php endwhile; ?>
+    </ul>
+    <br>
+    <a href="add_quiz.php" id="add">Add Quiz</a><!-- comment --><br>
+    <br>
+    <br>
 
-<h3>Quizzes</h3>
-<ul>
-    <?php while ($row = $quizzes_result->fetch_assoc()): ?>
-        <li>
-            <a href="quiz_details.php?quiz_id=<?php echo $row['id']; ?>">View - <?php echo $row['title']; ?></a>
-        </li>
-    <?php endwhile; ?>
-</ul><br>
-<a href="add_quiz.php" id="add">Add Quiz</a><!-- comment --><br>
-<br> <br>
-<h3>Users</h3>
-<ul>
-    <?php
-    $users_with_role_user_sql = "SELECT username FROM users WHERE role = 'user'";
-    $users_with_role_user_result = $conn->query($users_with_role_user_sql);
-
-    while ($user_row = $users_with_role_user_result->fetch_assoc()): ?>
-        <li><?php echo $user_row['username']; ?></li>
-    <?php endwhile; ?>
-</ul>
-</div>
+    </div>
 </body>
 </html>
 

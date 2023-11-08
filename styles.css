@@ -1,7 +1,18 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url('../Fonts/AvenirLTStd-Roman.otf'); 
+} 
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Avenir', sans-serif;
     background-color: #ffffff; /* White background */
     color: #333333; /* Dark text color */
+}
+
+
+.logo {
+    height: 90px; /* Adjust based on your logo's aspect ratio */
 }
 
 .container {
@@ -14,11 +25,19 @@ body {
 }
 
 h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
     color: #085399; /* Dark blue header */
 }
 
 form {
+    display: flex;
+    margin-left: 33vw;
+    flex-direction: column;
+    justify-content: center;
     margin-top: 20px;
+    width: 30vw;
 }
 
 input[type="text"] {
@@ -36,6 +55,7 @@ button[type="button"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 31vw;
 }
 
 #submit {
@@ -45,6 +65,7 @@ button[type="button"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 31vw;
 }
 
 button[type="button"]:hover,

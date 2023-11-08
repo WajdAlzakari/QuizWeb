@@ -22,44 +22,57 @@ $quizzes_result = $conn->query($quizzes_sql);
 <!-- Include Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
 <style>
+
+  @font-face {
+  font-family: 'Avenir';
+  src: url('../Fonts/AvenirLTStd-Roman.otf'); 
+  } 
+
   body, html {
     margin: 0;
     padding: 0;
     background-color: #f4f7f6;
     font-family: 'Avenir', sans-serif;
   }
+
   .header {
-    background-color: #007bff;
+    background-color: #085399;
     color: #fff;
     padding: 1rem;
     display: flex;
     align-items: center;
     font-family: 'Avenir', sans-serif;
   }
+
   .header img {
     height: 50px; /* Adjust based on your logo's aspect ratio */
   }
+
   .header .header-title {
     margin-left: 15px; /* Spacing between logo and title */
     font-size: 2rem;
   }
+
   .motivational-sentence {
+    margin-top: 20vh;
     text-align: center;
-    margin: 2rem 0;
-    font-style: italic;
-    color: #333;
     font-size: 1.5rem;
+    color: #085399;
     font-weight: bold;
     text-shadow: 1px 1px 2px #adb5bd;
   }
+
   .container {
     padding: 2rem;
   }
+  
   .quiz-grid {
+    margin-top: 1vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
   }
+
   .quiz-card {
     display: flex;
     flex-direction: column;
@@ -79,7 +92,7 @@ $quizzes_result = $conn->query($quizzes_sql);
   }
   .quiz-title {
     font-size: 1.5rem;
-    color: #007bff;
+    color: #085399;
     text-align: center;
     font-family: 'Avenir', sans-serif;
   }
@@ -87,11 +100,11 @@ $quizzes_result = $conn->query($quizzes_sql);
 </head>
 <body>
   <header class="header">
-    <img src="logo.png" alt="Website Logo"> <!-- Replace 'logo.png' with your logo's filename -->
+    <img src="logo2.png" alt="Website Logo"> <!-- Replace 'logo.png' with your logo's filename -->
     <div class="header-title">BrainyBuzz</div>
   </header>
   <div class="motivational-sentence">
-    "Knowledge is power. Test yours today!"
+    Knowledge is power. Test yours today!
   </div>
 
   <div class="container">

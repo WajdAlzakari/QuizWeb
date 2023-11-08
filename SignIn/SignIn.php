@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: ../dashboard.php");
                 exit();
             } else {
-                header("Location:../quizMenu.html");
+                header("Location:../quizMenu.php");
                 exit();
             }
         } else {
