@@ -38,14 +38,68 @@ $result_percentage = ($correct_answers / $total_questions) * 100;
 <html>
 <head>
     <title>Quiz Result</title>
+    <style> body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #000080;
+}
+
+p {
+    font-size: 18px;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    color: #008000;
+}
+
+.percentage {
+    font-size: 20px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000080;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.button-container button:hover {
+    background-color: #0000a0;
+}
+</style>
 </head>
 <body>
-
+<div class="container">
 <h2>Quiz Result</h2>
 
 <p>You got <?php echo $correct_answers; ?> out of <?php echo $total_questions; ?> correct.</p>
 <p>Percentage: <?php echo $result_percentage; ?>%</p>
-
+</div>
 </body>
 </html>
 
