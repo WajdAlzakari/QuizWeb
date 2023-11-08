@@ -8,9 +8,34 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
 <style>
   body, html {
-    height: 100%;
     margin: 0;
+    padding: 0;
     background-color: #f4f7f6;
+    font-family: 'Avenir', sans-serif;
+  }
+  .header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    font-family: 'Avenir', sans-serif;
+  }
+  .header img {
+    height: 50px; /* Adjust based on your logo's aspect ratio */
+  }
+  .header .header-title {
+    margin-left: 15px; /* Spacing between logo and title */
+    font-size: 2rem;
+  }
+  .motivational-sentence {
+    text-align: center;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #adb5bd;
   }
   .container {
     padding: 2rem;
@@ -29,7 +54,9 @@
     border-radius: 0.5rem;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 200px; /* Fixed height for uniformity */
+    height: 200px;
+    background-color: #fff;
+    font-family: 'Avenir', sans-serif;
   }
   .quiz-card:hover {
     transform: scale(1.05);
@@ -37,35 +64,35 @@
   }
   .quiz-title {
     font-size: 1.5rem;
-    color: #fff;
+    color: #007bff;
     text-align: center;
+    font-family: 'Avenir', sans-serif;
   }
-  /* Color classes for individual cards */
-  .color-1 { background-color: #ffadad; }
-  .color-2 { background-color: #ffd6a5; }
-  .color-3 { background-color: #fdffb6; }
-  .color-4 { background-color: #caffbf; }
-  .color-5 { background-color: #9bf6ff; }
-  .color-6 { background-color: #a0c4ff; }
 </style>
 </head>
 <body>
 
+<header class="header">
+  <img src="logo.png" alt="Website Logo"> <!-- Replace 'logo.png' with your logo's filename -->
+  <div class="header-title">BrainyBuzz</div>
+</header>
+<div class="motivational-sentence">
+  "Knowledge is power. Test yours today!"
+</div>
+
 <div class="container">
   <div class="quiz-grid">
-    <div class="quiz-card color-1" onclick="location.href='quiz1.html';">
+    <!-- Quiz cards go here -->
+    <div class="quiz-card" onclick="location.href='quiz1.html';">
       <div class="quiz-title">General Knowledge Quiz</div>
     </div>
-    <div class="quiz-card color-2" onclick="location.href='quiz2.html';">
+    <div class="quiz-card" onclick="location.href='quiz2.html';">
       <div class="quiz-title">Science Quiz</div>
     </div>
-    <div class="quiz-card color-3" onclick="location.href='quiz3.html';">
+    <div class="quiz-card" onclick="location.href='quiz3.html';">
       <div class="quiz-title">Mathematics Quiz</div>
     </div>
-    <div class="quiz-card color-4" onclick="location.href='quiz4.html';">
-      <div class="quiz-title">History Quiz</div>
-    </div>
-    <!-- Add more quizzes as needed, remember to change the href to the correct quiz link -->
+    <!-- Add more quizzes as needed -->
   </div>
 </div>
 
