@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Website</title>
+<script src="script.js"></script>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .container { width: 80%; margin: auto; max-width: 600px; }
+  .question { margin-bottom: 20px; }
+  .question h2 { margin: 0; }
+  .options input { margin-right: 10px; }
+  #submit { background-color: #5cb85c; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+  #submit:hover { background-color: #4cae4c; }
+  #result { margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Quiz</h1>
+  <div id="quiz">
+    <!-- Questions will be inserted dynamically -->
+  </div>
+  <button id="submit">Submit Answers</button>
+  <div id="result"></div>
+</div>
+
+
+</body>
+</html>
+
