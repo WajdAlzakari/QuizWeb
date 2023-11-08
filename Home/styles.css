@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url('../Fonts/AvenirLTStd-Roman.otf'); 
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Avenir', sans-serif;
+    background: linear-gradient(-45deg, #2B77BF, #003884, #0F5DA7, #2B77BF);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    height: 100%;
+    position: relative;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    padding: 1em 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 90px; /* Adjust based on your logo's aspect ratio */
+}
+
+.container {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 150px; /* Height of the wave */
+}
+
+.main-content {
+    margin-top: 17.3vh;
+    margin-bottom: 17vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-content h1{
+    font-size: 45px;
+}
+
+.main-content p{
+    font-size: 20px;
+    padding: 10px;
+}
+
+/*Moving Waves*/
+#Waves{
+    position: relative;
+    width: 100%;
+    height:130px;
+    overflow: hidden;
+}
+
+#Waves .air{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+    background-size: 1000px 100px
+}
+
+#Waves .air.air1{
+    animation: wave 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+#Waves .air.air2{
+    animation: wave2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+#Waves .air.air3{
+    animation: wave 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+#Waves .air.air4{
+    animation: wave2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes wave{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: 1000px; 
+    }
+}
+
+@keyframes wave2{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: -1000px; 
+    }
+}
+
+
+
+/* Your custom button styles */
+#SignInButton {
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: transparent;
+    color: white;
+    padding: 7px 50px;
+    font-size: 16.5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    transition: all .4s ease-in-out;
+}
+
+#SignUpButton {
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 0 15px #eeeeee3c;
+    color: #085399;
+    padding: 7px 50px;
+    font-size: 16.5px;
+    transition: all .4s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 0 15px #eeeeee82;
+    transform: translate3d(0, -2px, 0);
+}
+
+.get-started-btn {
+    border: 0;
+    border-radius: 30px;
+    padding: 13px 65px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 17px;
+    color: white;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #003884 0%, #2B77BF 51%, #003884 100%);
+    box-shadow: 0 0 15px #eeeeee3c;
+    background-size: 200% auto;
+}
+
+.get-started-btn:hover {
+    background-position: right center;
+    text-decoration: none;
+}
