@@ -139,7 +139,7 @@ header {
 
 
 
-/* Your custom button styles */
+/*custom button styles */
 #SignInButton {
     border: 2px solid white;
     border-radius: 30px;
@@ -150,6 +150,7 @@ header {
     margin-right: 5px;
     margin-bottom: 5px;
     transition: all .4s ease-in-out;
+    cursor: pointer;
 }
 
 #SignUpButton {
@@ -161,6 +162,7 @@ header {
     padding: 7px 50px;
     font-size: 16.5px;
     transition: all .4s ease-in-out;
+    cursor: pointer;
 }
 
 button:hover {
@@ -180,6 +182,7 @@ button:hover {
     background-image: linear-gradient(to right, #003884 0%, #2B77BF 51%, #003884 100%);
     box-shadow: 0 0 15px #eeeeee3c;
     background-size: 200% auto;
+    cursor: pointer;
 }
 
 .get-started-btn:hover {
