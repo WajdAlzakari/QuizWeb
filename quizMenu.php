@@ -70,7 +70,7 @@ $quizzes_result = $conn->query($quizzes_sql);
     margin-top: 1vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .quiz-card {
