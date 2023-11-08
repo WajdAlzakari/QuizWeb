@@ -14,7 +14,7 @@ body {
 }
 
 h2 {
-    color: #000080; /* Dark blue header */
+    color: #085399; /* Dark blue header */
 }
 
 form {
@@ -30,7 +30,7 @@ input[type="text"] {
 }
 
 button[type="button"] {
-    background-color: #000080; /* Dark blue button */
+    background-color: #085399; /* Dark blue button */
     color: #ffffff;
     padding: 10px 20px;
     border: none;
@@ -39,7 +39,7 @@ button[type="button"] {
 }
 
 #submit {
-    background-color: #000080; /* Dark blue button */
+    background-color: #085399; /* Dark blue button */
     color: #ffffff;
     padding: 10px 20px;
     border: none;
@@ -49,5 +49,5 @@ button[type="button"] {
 
 button[type="button"]:hover,
 button[type="submit"]:hover {
-    background-color: #0000a0; /* Darker blue on hover */
+    background-color: #085399; /* Darker blue on hover */
 }

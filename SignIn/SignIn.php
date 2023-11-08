@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['role'] = $row['role']; // Assuming 'role' is a column in your 'users' table
 
             if ($row['role'] == 'admin') {
-                header("Location: dashboard.php");
+                header("Location: ../dashboard.php");
                 exit();
             } else {
                 header("Location:../quizMenu.html");

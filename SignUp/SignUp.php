@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Execute the statement
     if ($stmt->execute()) {
         echo "<script>alert('You have signed up successfully');</script>";
-        echo '<script>window.location.href = "SignIn.php";</script>';
+        echo '<script>window.location.href = "../SignIn/SignIn.php";</script>';
     } else {
         echo "Error: " . $stmt->error;
     }
